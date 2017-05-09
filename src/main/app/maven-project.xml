@@ -58,6 +58,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 			path="/flights"
 			allowedMethods="GET"
 			doc:name="HTTP" />
+        <set-property propertyName="#[&quot;Content-Type&quot;]" value="#[&quot;application/json&quot;]" doc:name="Property"/>
 		<db:select
 			config-ref="Derby_Connector"
 			doc:name="Database Query Flights"
